@@ -1,5 +1,14 @@
 <% provide(:title, 'Menu') %>
 
+<nav id="main-nav">
+	<ul>
+		<li><%= link_to "HOME", root_path %></li>
+		<li class="selected"><%= link_to "MENU", menu_path %></li>
+		<li><%= link_to "MISSION", '#' %></li>
+		<li><%= link_to "ABOUT US", '#' %></li>
+	</ul>
+</nav>
+
 <div id="content">
 	<section id="menu">
 		<h1>Menu</h1>
