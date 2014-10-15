@@ -1,6 +1,7 @@
 CafeOakville::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/menu"
+  root 'static_pages#home'
+  match '/menu', to: 'static_pages#menu', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
