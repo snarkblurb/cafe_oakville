@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def menu
   end
+
+	def signin
+	end
 end

@@ -14,4 +14,10 @@ describe "StaticPages" do
 
 		it { should have_title(full_title('Menu')) }
 	end
+
+	describe "Sign In page" do
+		before { visit signin_path }
+
+		it { should have_title(full_title('Sign In')) }
+	end
 end

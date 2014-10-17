@@ -41,8 +41,8 @@ nav#main-nav ul {
 	margin:								0px;
 	list-style-type:			none;
 	padding:							5px 0px 5px 0px;
-	border-top:						solid navy;
-	border-bottom:				solid navy;
+	border-top:						solid;
+	border-bottom:				solid;
 }
 
 nav#main-nav ul li {
@@ -62,11 +62,11 @@ nav#main-nav ul li a:link, nav#main-nav ul li a:visited {
 }
 
 nav#main-nav ul li a:link {
-	color:								navy;
+	color:								black;
 }
 
 nav#main-nav ul li a:visited {
-	color:								navy;
+	color:								black;
 }
 
 section#menu {
