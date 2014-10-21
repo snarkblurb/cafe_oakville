@@ -64,6 +64,8 @@ GEM
     mini_portile (0.6.0)
     minitest (4.7.5)
     multi_json (1.10.1)
+    nav_lynx (1.1.1)
+      rails (>= 3.1.0)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     pg (0.15.1)
@@ -154,6 +156,7 @@ DEPENDENCIES
   coffee-rails (= 4.0.1)
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
+  nav_lynx
   pg (= 0.15.1)
   rails (= 4.0.8)
   rails_12factor (= 0.0.2)

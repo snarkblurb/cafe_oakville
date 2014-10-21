@@ -11,88 +11,129 @@
 	font-weight:					bold;
 }
 
+@font-face {
+	font-family:					chelsea-market;
+	src:									font-url('ChelseaMarket-Regular.ttf');
+}
+
 /* mixins, variables, etc. */
 
-$offWhite: 							#fdfdf0;
+$off-white: 						#fdfdf0;
+$dusty-rose:						#e9a79d;
 
 * {
 	margin:								0px;
 }
 
 body {
-	background-color:			white;
+	background-color:			$dusty-rose;
+	color:								white;
+	width:								900px;
+	margin:								50px auto 0px auto;
+	font-family:					chelsea-market;
 }
 
 header#top {
-	font-size:						175%;
-	font-family:					courier;
-	text-align:						center;
 	padding:							30px 15px;
 }
 
-nav#main-nav {
-	margin:								10px 0px 0px 0px;
-	text-align:						center;
-	opacity:							1;
-	background-color:			white;
-}
-
-nav#main-nav ul {
-	margin:								0px;
-	list-style-type:			none;
-	padding:							5px 0px 5px 0px;
-	border-top:						solid;
-	border-bottom:				solid;
-}
-
-nav#main-nav ul li {
-	display:							inline;
-	padding:							5px 72px 5px 72px;
-}
-
-nav#main-nav ul li.selected a:visited {
-	color:								salmon;
-}
-
-nav#main-nav ul li a:link, nav#main-nav ul li a:visited {
-	text-decoration:			none;
-	font-family:					montserrat;
-	font-weight:					bold;
-	font-size:						150%;
-}
-
-nav#main-nav ul li a:link {
-	color:								black;
-}
-
-nav#main-nav ul li a:visited {
-	color:								black;
-}
-
-section#menu {
-	font-family:					courier;
-}
-
-section#menu h1 {
-	margin:								75px auto 40px auto;
+header#top h1 {
 	font-size:						300%;
 	text-align:						center;
 }
 
-div#menu-container ul {
+#main-nav {
+	margin:								0px auto;
+	text-align:						center;
+	padding:							0px;
+	border-right-width:					2px;
+}
+
+#main-nav ul {
 	margin:								0px;
+	list-style-type:			none;
+	border:								solid 2px;
+	background-color:			white;
+	display:							table;
+	-webkit-padding-start:0px;
+}
+
+#main-nav ul li {
+	display:							table-cell;
+	padding:							5px 42px;
+	margin:								0px 2px;
+}
+
+#main-nav ul li.selected {
+	background-color:			$dusty-rose;
+}
+
+#main-nav ul li.selected a:visited {
+	color:								white;
+}
+
+#main-nav ul li a:link, #main-nav ul li a:visited {
+	text-decoration:			none;
+	font-weight:					bold;
+	font-size:						.9em;
+	color:								$dusty-rose;
+}
+
+section#menu {
+	font-family:					chelsea-market;
+	margin:								50px 0px;
+}
+
+section#menu h1 {
+	margin:								0px auto;
+	font-size:						200%; 
+	text-align:						center;
+}
+
+div#menu-container ul {
 	padding:							0px;
 	list-style-type:			none;
-	width:								300px;
+	width:								250px;
 	margin:								0px auto;
 }
 
 div#menu-container ul li {
-	font-family:					montserrat;
 	font-size:						150%;
 	padding:							10px 0px;
 	margin:								0px auto;
 }
+
+#breakfast h2, #lunch h2, #beverages h2 {
+	text-align:						center;
+	margin:								40px 0px 20px 0px;	
+}
+
+#breakfast, #lunch, #beverages {
+	line-height:					.8em;
+}
+
+#breakfast, #beverages {
+}
+
+#breakfast {
+	margin:								0px 70px 30px 100px;
+	float:								left;
+}
+
+#lunch {
+	float:								left;
+	margin:								0px 70px 20px 100px;
+}
+
+#beverages {
+	margin:							  0px 100px 0px 70px;
+	float:								right;
+}
+
+#breakfast ul, #lunch ul, #beverages ul {
+	font-size:						.8em;
+}
+
 
 span.dots {
 	float:								right;
@@ -103,19 +144,27 @@ span.price {
 	margin-left:					.5em;
 }
 
-section#main {
+#home {
 	font-size:						150%;
 	margin:								75px auto 50px auto;
 	width:								700px;
 }
 
-section#main h1, section#main h2 {
+#home h1, #home h2 {
 	font-family:					courier;
 	text-align: 					center;
 }
 
-section#main article p {
+#home article p {
 	font-family:					montserrat;
 	font-size:						.8;
 	line-height:					1.4em;
+}
+
+footer {
+	text-align:						center;
+	clear:								both;	
+	padding:							10px;
+	line-height:					.9em;
+	font-size:						.7em;
 }
