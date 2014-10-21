@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 /* fonts */
 
 @font-face {
@@ -21,6 +24,12 @@
 $off-white: 						#fdfdf0;
 $dusty-rose:						#e9a79d;
 $pumpkin-orange:				#8b502a;
+$granny-smith-apple:		#a8e4a0;
+$moss-green:						#addfad;
+$dark-sea-green:				#8fbc8f;
+$darker-sea-green:			#7baa74;
+$zerply:								#9dcc7a;
+$string-green:					#82923a;
 
 * {
 	margin:								0px;
@@ -154,6 +163,7 @@ span.price {
 	margin-left:					.5em;
 }
 
+
 #home {
 	font-size:						150%;
 	margin:								75px auto 50px auto;
@@ -171,10 +181,34 @@ span.price {
 	line-height:					1.4em;
 }
 
-footer {
-	text-align:						center;
-	clear:								both;	
-	padding:							10px;
-	line-height:					.9em;
-	font-size:						.7em;
+/* forms */
+
+#sign-up {
+	margin:								50px 0px;
 }
+
+#sign-up h1 {
+	text-align:						center;
+	margin:								0px 0px 20px 0px;
+}
+
+input, textarea, select, .uneditable-input {
+	border: 							1px solid #bbb;
+	width: 								100%;
+	margin-bottom: 				15px;
+}
+
+input {
+	height: auto !important;
+}
+
+.btn {
+	background-color:			#a5c282;
+	border:								solid 2px #7da34f;
+}
+
+.btn:hover {
+	background-color:			#a4ba8a;
+	border:								solid 2px #7da34f;
+}
+
