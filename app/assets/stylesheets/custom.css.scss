@@ -67,11 +67,13 @@ header#top h1 {
 	display:							table;
 	-webkit-padding-start:0px;
 	width:								900px;
+	border-radius:				5px;
 }
 
 #main-nav ul li {
 	display:							table-cell;
 	margin:								0px 2px;
+	border-radius:				5px;
 }
 
 #main-nav ul li a {
