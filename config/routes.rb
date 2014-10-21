@@ -2,7 +2,7 @@ CafeOakville::Application.routes.draw do
   root 'static_pages#home'
 	get 'menu' => 'static_pages#menu'
 	get 'about' => 'static_pages#about'
-	match '/signin', to: 'static_pages#signin', via: 'get'
+	get '/signin' => 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
