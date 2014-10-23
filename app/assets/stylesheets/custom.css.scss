@@ -22,6 +22,12 @@
 
 /* mixins, variables, etc. */
 
+@mixin box_sizing {
+	-moz-box-sizing:			border-box;
+	-webkit-box-sizing:		border-box;
+	box-sizing:						border-box;
+}
+
 $off-white: 						#fdfdf0;
 $dusty-rose:						#e9a79d;
 
@@ -38,6 +44,9 @@ $chamoisee:							#a0785a;
 $chestnut:							#954535;
 $rusty:									#b44f1f;
 $red-orange:						#ea6550;
+
+
+/* content */
 
 * {
 	margin:								0px;
@@ -243,7 +252,7 @@ input:focus, textarea:focus{
 	border:								solid 1px $string-green;
 	border-radius:				5px;
 	float:								none;
-	margin-top:						5px;
+	margin:								5px 0px;
 	color:								white;
 }
 
@@ -254,11 +263,10 @@ input:focus, textarea:focus{
 }
 
 #error_explanation {
-	color:								navy;
 }
 
 #error_explanation ul {
-	color:								navy;
+	color:								$state-danger-text;
 	padding-left:					12px;
 }
 
@@ -268,4 +276,16 @@ input:focus, textarea:focus{
 
 .field_with_errors .form-control {
 	color:								$state-danger-text;
+}
+
+
+
+/* miscellaneous */
+
+.debug_dump {
+	clear:								both;
+	float:								left;
+	width:								100%;
+	margin-top:						45px;
+	@include box_sizing;
 }
