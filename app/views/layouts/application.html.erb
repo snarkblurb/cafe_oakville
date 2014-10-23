@@ -21,14 +21,19 @@
 			<ul>
 				<%= nav_link_to "Home", root_path, {}, wrapper: 'li' %>	
 				<%= nav_link_to "Menu", menu_path, {}, wrapper: 'li' %>	
-				<%= nav_link_to "Sign in", signin_path, {}, wrapper: 'li' %>	
+				<%= nav_link_to "Log in", signin_path, {}, wrapper: 'li' %>	
 				<%= nav_link_to "Reserve", '#', {}, wrapper: 'li' %>
-				<%= nav_link_to "FAQ's", '#', {}, wrapper: 'li' %>
+				<%= nav_link_to "Q 'n A", '#', {}, wrapper: 'li' %>
 				<%= nav_link_to "Our roots", about_path, {}, wrapper: 'li' %>	
 			</ul>
 		</nav>
 
-		<%= yield %>
+		<div id="content">
+			<% flash.each do |message_type, message| %>
+				<div class="alert alert-<%= message_type %>"><%= message %></div>
+			<% end %>
+			<%= yield %>
+		</div>
 
 	</body>
 </html>

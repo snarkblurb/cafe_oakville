@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /* fonts */
 
 @font-face {
@@ -23,28 +24,38 @@
 
 $off-white: 						#fdfdf0;
 $dusty-rose:						#e9a79d;
-$pumpkin-orange:				#8b502a;
+
 $granny-smith-apple:		#a8e4a0;
-$moss-green:						#addfad;
 $dark-sea-green:				#8fbc8f;
-$darker-sea-green:			#7baa74;
 $zerply:								#9dcc7a;
 $string-green:					#82923a;
+$forest-green:					#566435;
+$mantis:								#74c365;
+
+$wood-brown:						#c19a6b;
+$pale-brown:						#987654;
+$chamoisee:							#a0785a;
+$chestnut:							#954535;
+$rusty:									#b44f1f;
+$red-orange:						#ea6550;
 
 * {
 	margin:								0px;
 }
 
 body {
-	background-color:			$dusty-rose;
 	color:								white;
-	width:								900px;
-	margin:								50px auto 0px auto;
+	width:								100%;
+	height:								100%;
+	margin:								0px auto 0px auto;
 	font-family:					chelsea-market;
+	background-color:			$dusty-rose;
 }
 
 header#top {
 	padding:							30px 15px;
+	margin-top:						25px;
+	/*background-color:			rgba($pumpkin-orange, .75);*/
 }
 
 header#top h1 {
@@ -53,10 +64,10 @@ header#top h1 {
 }
 
 #main-nav {
+	width:								900px;
 	margin:								0px auto;
 	text-align:						center;
 	padding:							0px;
-	border-right-width:					2px;
 }
 
 #main-nav ul {
@@ -84,10 +95,11 @@ header#top h1 {
 }
 
 #main-nav ul li.selected {
-	background-color:			$dusty-rose;
+	background-color: 		$zerply;
 }
 
 #main-nav ul li.selected a:visited {
+	background-color:			$zerply;
 	color:								white;
 	display:							block;
 }
@@ -102,7 +114,7 @@ header#top h1 {
 
 section#menu {
 	font-family:					chelsea-market;
-	margin:								50px 0px;
+	margin:								0px;
 }
 
 section#menu h1 {
@@ -119,7 +131,6 @@ div#menu-container ul {
 }
 
 div#menu-container ul li {
-	font-size:						150%;
 	padding:							10px 0px;
 	margin:								0px auto;
 }
@@ -137,22 +148,22 @@ div#menu-container ul li {
 }
 
 #breakfast {
-	margin:								0px 70px 30px 120px;
+	margin:								0px 50px 30px 100px;
 	float:								left;
 }
 
 #lunch {
 	float:								left;
-	margin:								0px 70px 20px 120px;
+	margin:								0px 50px 20px 100px;
 }
 
 #beverages {
-	margin:							  0px 120px 0px 70px;
+	margin:							  0px 100px 0px 50px;
 	float:								right;
 }
 
 #breakfast ul, #lunch ul, #beverages ul {
-	font-size:						.8em;
+	font-size:						1.2em;
 }
 
 
@@ -167,50 +178,98 @@ span.price {
 
 
 #home {
-	font-size:						150%;
-	margin:								75px auto 50px auto;
-	width:								700px;
+	margin:								0px;
 }
 
-#home h1, #home h2 {
-	font-family:					courier;
+#home h1 {
+	font-family:					chelsea-market;
 	text-align: 					center;
+	font-size:						200%;
 }
 
 #home article p {
-	font-family:					montserrat;
-	font-size:						.8;
+	font-family:					chelsea-market;
+	font-size:						1.2em;
 	line-height:					1.4em;
+	width:								490px;
+	margin:								0px auto;
+}
+
+#content {
+	width:								900px;
+	height:								auto;
+	margin:								0px auto 50px auto;
+	padding-top:					50px;
+}
+
+/* footer */
+
+footer {
+	vertical-align:				baseline;
+	width:								100%;
+	clear:								both;
 }
 
 /* forms */
 
 #sign-up {
-	margin:								50px 0px;
+	margin:								0px;
 }
 
 #sign-up h1 {
 	text-align:						center;
 	margin:								0px 0px 20px 0px;
+	font-size:						200%;
 }
 
 input, textarea, select, .uneditable-input {
-	border: 							1px solid #bbb;
+	border: 							0px solid #bbb;
 	width: 								100%;
 	margin-bottom: 				15px;
 }
 
 input {
-	height: auto !important;
+	height: 							auto !important;
+	border-radius:				5px;
+	font-size:						.9em;
+	padding:							3px !important;
+	margin-top:						3px;
+	color:								black;
+}
+
+input:focus, textarea:focus{
+	outline:							none;
 }
 
 .btn {
-	background-color:			#a5c282;
-	border:								solid 2px #7da34f;
+	font-family:					chelsea-market;
+	background-color:			$mantis;
+	border:								solid 0px $string-green;
+	border-radius:				5px;
+	float:								none;
+	margin-top:						5px;
+	color:								white;
 }
 
 .btn:hover {
-	background-color:			#a4ba8a;
-	border:								solid 2px #7da34f;
+	background-color:			$zerply;
+	border:								solid 1px $string-green;
+	cursor:								pointer;
 }
 
+#error_explanation {
+	color:								navy;
+}
+
+#error_explanation ul {
+	color:								navy;
+	padding-left:					12px;
+}
+
+.field_with_errors {
+	@extend .has-error;
+}
+
+.field_with_errors .form-control {
+	color:								$state-danger-text;
+}
