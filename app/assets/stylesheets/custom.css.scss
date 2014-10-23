@@ -117,11 +117,6 @@ section#menu {
 	margin:								0px;
 }
 
-section#menu h1 {
-	margin:								0px auto;
-	font-size:						200%; 
-	text-align:						center;
-}
 
 div#menu-container ul {
 	padding:							0px;
@@ -137,7 +132,7 @@ div#menu-container ul li {
 
 #breakfast h2, #lunch h2, #beverages h2 {
 	text-align:						center;
-	margin:								40px 0px 20px 0px;	
+	margin:								40px 0px 0px 0px;	
 }
 
 #breakfast, #lunch, #beverages {
@@ -148,17 +143,17 @@ div#menu-container ul li {
 }
 
 #breakfast {
-	margin:								0px 50px 30px 100px;
+	margin:								0px 50px 30px 110px;
 	float:								left;
 }
 
 #lunch {
 	float:								left;
-	margin:								0px 50px 20px 100px;
+	margin:								0px 50px 20px 110px;
 }
 
 #beverages {
-	margin:							  0px 100px 0px 50px;
+	margin:							  0px 110px 0px 50px;
 	float:								right;
 }
 
@@ -177,16 +172,6 @@ span.price {
 }
 
 
-#home {
-	margin:								0px;
-}
-
-#home h1 {
-	font-family:					chelsea-market;
-	text-align: 					center;
-	font-size:						200%;
-}
-
 #home article p {
 	font-family:					chelsea-market;
 	font-size:						1.2em;
@@ -199,8 +184,21 @@ span.price {
 	width:								900px;
 	height:								auto;
 	margin:								0px auto 50px auto;
-	padding-top:					50px;
+	padding-top:					20px;
 }
+
+#content h1 {
+	text-align:						center;
+	margin:								0px 0px 20px 0px;
+	font-size:						200%;
+	padding-top:					30px;
+}
+
+#content h2 {
+	font-size:						150%;
+}
+
+
 
 /* footer */
 
@@ -216,35 +214,33 @@ footer {
 	margin:								0px;
 }
 
-#sign-up h1 {
-	text-align:						center;
-	margin:								0px 0px 20px 0px;
-	font-size:						200%;
-}
 
 input, textarea, select, .uneditable-input {
 	border: 							0px solid #bbb;
 	width: 								100%;
 	margin-bottom: 				15px;
+	font-size:						.9em;
+	font-family:					sans-serif;
 }
 
 input {
 	height: 							auto !important;
 	border-radius:				5px;
 	font-size:						.9em;
-	padding:							3px !important;
+	padding:							3px 3px 1px 3px !important;
 	margin-top:						3px;
 	color:								black;
 }
 
 input:focus, textarea:focus{
 	outline:							none;
+	box-shadow:						0 0 1px 1px navy;
 }
 
 .btn {
 	font-family:					chelsea-market;
 	background-color:			$mantis;
-	border:								solid 0px $string-green;
+	border:								solid 1px $string-green;
 	border-radius:				5px;
 	float:								none;
 	margin-top:						5px;
