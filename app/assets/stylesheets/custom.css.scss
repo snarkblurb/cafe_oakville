@@ -58,7 +58,7 @@ body {
 	height:								100%;
 	margin:								0px auto 0px auto;
 	font-family:					chelsea-market;
-	background-color:			$dusty-rose;
+	background-color:			$wood-brown;
 }
 
 header#top {
@@ -117,7 +117,7 @@ header#top h1 {
 	text-decoration:			none;
 	font-weight:					bold;
 	font-size:						.9em;
-	color:								$dusty-rose;
+	color:								$wood-brown;
 	display:							block;
 }
 
@@ -223,6 +223,10 @@ footer {
 	margin:								0px;
 }
 
+form {
+	width:								280px;
+	margin:								0px auto;
+}
 
 input, textarea, select, .uneditable-input {
 	border: 							0px solid #bbb;
@@ -248,8 +252,8 @@ input:focus, textarea:focus{
 
 .btn {
 	font-family:					chelsea-market;
-	background-color:			$mantis;
-	border:								solid 1px $string-green;
+	background-color:			$zerply;
+	border:								solid 1px $zerply;
 	border-radius:				5px;
 	float:								none;
 	margin:								5px 0px;
@@ -257,8 +261,8 @@ input:focus, textarea:focus{
 }
 
 .btn:hover {
-	background-color:			$zerply;
-	border:								solid 1px $string-green;
+	background-color:			$mantis;
+	border:								solid 1px $mantis;
 	cursor:								pointer;
 }
 
