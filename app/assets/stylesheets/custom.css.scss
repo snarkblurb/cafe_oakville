@@ -58,7 +58,7 @@ body {
 	height:								100%;
 	margin:								0px auto 0px auto;
 	font-family:					chelsea-market;
-	background-color:			$wood-brown;
+	background-color:			$chamoisee;
 }
 
 header#top {
@@ -117,7 +117,7 @@ header#top h1 {
 	text-decoration:			none;
 	font-weight:					bold;
 	font-size:						.9em;
-	color:								$wood-brown;
+	color:								$chamoisee;
 	display:							block;
 }
 
@@ -203,6 +203,10 @@ span.price {
 	padding-top:					30px;
 }
 
+#content a, #content a:visited {
+	color:								#97a3da;
+}
+
 #content h2 {
 	font-size:						150%;
 }
@@ -225,7 +229,7 @@ footer {
 
 form {
 	width:								280px;
-	margin:								0px auto;
+	margin:								0px auto 0px auto;
 }
 
 input, textarea, select, .uneditable-input {
