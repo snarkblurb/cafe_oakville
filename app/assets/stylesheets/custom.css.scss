@@ -37,6 +37,7 @@ $zerply:								#9dcc7a;
 $string-green:					#82923a;
 $forest-green:					#566435;
 $mantis:								#74c365;
+$button-green:					#8bc262;
 
 $wood-brown:						#c19a6b;
 $pale-brown:						#987654;
@@ -45,8 +46,11 @@ $chestnut:							#954535;
 $rusty:									#b44f1f;
 $red-orange:						#ea6550;
 
+$periwinkle:						#a8b2eb;
 
-/* content */
+
+
+/* body */
 
 * {
 	margin:								0px;
@@ -61,16 +65,23 @@ body {
 	background-color:			$chamoisee;
 }
 
+
+/* main header */
+
 header#top {
 	padding:							30px 15px;
-	margin-top:						25px;
-	/*background-color:			rgba($pumpkin-orange, .75);*/
+	width:								900px;
+	margin:								25px auto 0 auto;
 }
 
 header#top h1 {
 	font-size:						300%;
 	text-align:						center;
 }
+
+
+
+/* main-nav */
 
 #main-nav {
 	width:								900px;
@@ -104,7 +115,7 @@ header#top h1 {
 }
 
 #main-nav ul li.selected {
-	background-color: 		$zerply;
+	background-color: 		$button-green;
 }
 
 #main-nav ul li.selected a:visited {
@@ -121,6 +132,48 @@ header#top h1 {
 	display:							block;
 }
 
+
+
+/* content */
+
+#content {
+	width:								900px;
+	height:								auto;
+	margin:								0px auto 50px auto;
+	padding-top:					20px;
+}
+
+#content h1 {
+	text-align:						center;
+	margin:								0px 0px 20px 0px;
+	font-size:						200%;
+	padding-top:					30px;
+}
+
+#content a, #content a:visited {
+	/*color:								#97a3da;*/
+	color:								$periwinkle;
+}
+
+#content h2 {
+	font-size:						150%;
+}
+
+
+/* home page */ 
+
+#home article p {
+	font-family:					chelsea-market;
+	font-size:						1.2em;
+	line-height:					1.4em;
+	width:								490px;
+	margin:								0px auto;
+}
+
+
+
+/* menu */
+
 section#menu {
 	font-family:					chelsea-market;
 	margin:								0px;
@@ -130,7 +183,7 @@ section#menu {
 div#menu-container ul {
 	padding:							0px;
 	list-style-type:			none;
-	width:								250px;
+	width:								220px;
 	margin:								0px auto;
 }
 
@@ -141,7 +194,7 @@ div#menu-container ul li {
 
 #breakfast h2, #lunch h2, #beverages h2 {
 	text-align:						center;
-	margin:								40px 0px 0px 0px;	
+	margin:								20px 0px 0px 0px;	
 }
 
 #breakfast, #lunch, #beverages {
@@ -152,17 +205,17 @@ div#menu-container ul li {
 }
 
 #breakfast {
-	margin:								0px 50px 30px 110px;
+	margin:								0px 50px 30px 140px;
 	float:								left;
 }
 
 #lunch {
 	float:								left;
-	margin:								0px 50px 20px 110px;
+	margin:								0px 50px 20px 140px;
 }
 
 #beverages {
-	margin:							  0px 110px 0px 50px;
+	margin:							  0px 140px 0px 50px;
 	float:								right;
 }
 
@@ -181,45 +234,7 @@ span.price {
 }
 
 
-#home article p {
-	font-family:					chelsea-market;
-	font-size:						1.2em;
-	line-height:					1.4em;
-	width:								490px;
-	margin:								0px auto;
-}
 
-#content {
-	width:								900px;
-	height:								auto;
-	margin:								0px auto 50px auto;
-	padding-top:					20px;
-}
-
-#content h1 {
-	text-align:						center;
-	margin:								0px 0px 20px 0px;
-	font-size:						200%;
-	padding-top:					30px;
-}
-
-#content a, #content a:visited {
-	color:								#97a3da;
-}
-
-#content h2 {
-	font-size:						150%;
-}
-
-
-
-/* footer */
-
-footer {
-	vertical-align:				baseline;
-	width:								100%;
-	clear:								both;
-}
 
 /* forms */
 
@@ -251,13 +266,12 @@ input {
 
 input:focus, textarea:focus{
 	outline:							none;
-	box-shadow:						0 0 1px 1px navy;
 }
 
 .btn {
 	font-family:					chelsea-market;
-	background-color:			$zerply;
-	border:								solid 1px $zerply;
+	background-color:			$button-green;
+	border:								solid 1px #72b043;
 	border-radius:				5px;
 	float:								none;
 	margin:								5px 0px;
@@ -265,8 +279,8 @@ input:focus, textarea:focus{
 }
 
 .btn:hover {
-	background-color:			$mantis;
-	border:								solid 1px $mantis;
+	background-color:			$zerply;
+	border:								solid 1px $zerply;
 	cursor:								pointer;
 }
 
@@ -284,6 +298,30 @@ input:focus, textarea:focus{
 
 .field_with_errors .form-control {
 	color:								$state-danger-text;
+}
+
+.checkbox {
+	margin-top:						-10px;
+	margin-bottom:				10px;
+	span {
+		margin-left:				20px;
+		font-weight:				normal;
+	}
+}
+
+#session_remember_me {
+	width:								auto;
+	margin-left:					0;
+}
+
+
+
+/* footer */
+
+footer {
+	vertical-align:				baseline;
+	width:								100%;
+	clear:								both;
 }
 
 
