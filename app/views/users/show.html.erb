@@ -1,4 +1,6 @@
 <p>
 	<%= @user.name %>, <%= @user.email %>
-	<%= link_to "Edit", edit_user_path(current_user) %>
+	<% if current_user?(@user) %>
+		<%= link_to "Edit", edit_user_path(current_user) %>
+	<% end %>
 </p>
