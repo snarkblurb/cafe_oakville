@@ -164,19 +164,19 @@ header#top h1 {
 
 /* users */
 
-#all-users, #show-user {
+#all-users, #show-user, #all-events {
 	margin:								0px 50px;
 	p, ul {
 		font-size:					125%;
 	}
 }
 
-.users {
+.users, .events {
 	list-style:						none;
 	-webkit-padding-start:0;
 }
 
-.users li {
+.users li, .events li {
 	overflow:							auto;
 	padding:							10px 0;
 }

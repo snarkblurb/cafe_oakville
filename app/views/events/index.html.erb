@@ -1,0 +1,11 @@
+<% provide(:title, 'All events') %>
+
+<div id="all-events">
+  <h1>All events</h1>
+
+  <ul class="events">
+  <% @events.each do |event| %>
+    <li><%= event.day.strftime("%B %-d, %Y") %></li>
+  <% end %>
+  </ul>
+</div>
