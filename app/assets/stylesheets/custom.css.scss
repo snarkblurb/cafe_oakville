@@ -162,15 +162,21 @@ header#top h1 {
 }
 
 
-/* user index */
+/* users */
 
-.users {
+#all-users, #show-user, #all-events {
+	margin:								0px 50px;
+	p, ul {
+		font-size:					125%;
+	}
+}
+
+.users, .events {
 	list-style:						none;
-	margin:								0 50px;
 	-webkit-padding-start:0;
 }
 
-.users li {
+.users li, .events li {
 	overflow:							auto;
 	padding:							10px 0;
 }
