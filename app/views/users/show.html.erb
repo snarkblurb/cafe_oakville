@@ -1,6 +1,13 @@
-<p>
-	<%= @user.name %>, <%= @user.email %>
-	<% if current_user?(@user) %>
-		<%= link_to "Edit", edit_user_path(current_user) %>
-	<% end %>
-</p>
+<% provide(:title, @user.name) %>
+
+<div id="show-user">
+	<h1>
+		<%= @user.name %>
+	</h1>
+
+	<p>
+		<% if current_user?(@user) %>
+			<%= link_to "Edit", edit_user_path(current_user) %>
+		<% end %>
+	</p>
+</div>

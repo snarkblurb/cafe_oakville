@@ -162,11 +162,17 @@ header#top h1 {
 }
 
 
-/* user index */
+/* users */
+
+#all-users, #show-user {
+	margin:								0px 50px;
+	p, ul {
+		font-size:					125%;
+	}
+}
 
 .users {
 	list-style:						none;
-	margin:								0 50px;
 	-webkit-padding-start:0;
 }
 
