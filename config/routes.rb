@@ -12,6 +12,7 @@ CafeOakville::Application.routes.draw do
 	delete 'logout' => 'sessions#destroy'
 
 	get 'events' => 'events#index'
+	get 'events/new' => 'events#new'
 
 	resources :users
 

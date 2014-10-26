@@ -7,5 +7,9 @@
   <% @events.each do |event| %>
     <li><%= event.day.strftime("%B %-d, %Y") %></li>
   <% end %>
-  </ul>
+	</ul>
+
+	<p>
+		<%= link_to "Add event", events_new_path %>
+	</p>
 </div>
