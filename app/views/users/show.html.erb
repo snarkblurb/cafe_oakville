@@ -10,4 +10,10 @@
 			<%= link_to "Edit", edit_user_path(current_user) %>
 		<% end %>
 	</p>
+
+	<ul>
+		<% @user.events.each do |event| %>
+			<%= link_to event.day.strftime('%B %-d, %Y'), events_path %>
+		<% end %>
+	</ul>
 </div>

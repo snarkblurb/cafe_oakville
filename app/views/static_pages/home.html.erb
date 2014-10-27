@@ -1,5 +1,60 @@
 
 <div id="main">
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#home-carousel").carousel({
+				interval : false,
+				pause: false
+			});
+		});
+	</script>
+
+	<div id="home-carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#home-carousel" data-slide-to="1"></li>
+			<li data-target="#home-carousel" data-slide-to="2"></li>
+			<li data-target="#home-carousel" data-slide-to="3"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item coffee active">
+				<%= image_tag "cappuccino-coffee.jpg", alt: "coffee" %>
+				<div class="carousel-caption">
+					<p>1st photo</p>
+				</div>
+			</div>
+			<div class="item bible">
+				<%= image_tag "open-bible.jpg", alt: "bible" %>
+				<div class="carousel-caption">
+					<p>2nd photo</p>
+				</div>
+			</div>
+			<div class="item cafe">
+				<%= image_tag "caffe-old-fashioned.jpg", alt: "cafe" %>
+				<div class="carousel-caption">
+					<p>3rd photo</p>
+				</div>
+			</div>
+			<div class="item chess">
+				<%= image_tag "chess.jpg", alt: "chess" %>
+				<div class="carousel-caption">
+					<p>4th photo</p>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#home-carousel" 
+			role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		<a class="right carousel-control" href="#home-carousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	</div>
+
+	<!--
 	<section id="home">
 		<article>
 			<h1>Why come to Cafe Oakville?</h1>
@@ -11,5 +66,7 @@
 				dependent)!
 			</p>
 		</article>
-	</section>
+		</section>
+		-->
 </div>
+
