@@ -12,8 +12,12 @@ gem 'jbuilder', '1.0.2'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'autoprefixer-rails'
 gem 'bcrypt', '3.1.7'
+gem 'faker', '1.4.2'
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 gem 'nav_lynx'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

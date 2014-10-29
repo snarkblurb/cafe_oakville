@@ -6,18 +6,33 @@
 
 @font-face {
 	font-family:					montserrat;
-	src:									font-url('Montserrat-Regular.ttf');
+	src:									font-url('Montserrat/Montserrat-Regular.ttf');
 }
 
 @font-face {
 	font-family:					montserrat;
-	src:									font-url('Montserrat-Bold.ttf');
+	src:									font-url('Montserrat/Montserrat-Bold.ttf');
 	font-weight:					bold;
 }
 
 @font-face {
 	font-family:					chelsea-market;
 	src:									font-url('ChelseaMarket-Regular.ttf');
+}
+
+@font-face {
+	font-family:					aaargh;
+	src:									font-url('Aaargh.ttf');
+}
+
+@font-face {
+	font-family:					folks;
+	src:									font-url('Folks/Folks-Normal.ttf');
+}
+
+@font-face {
+	font-family:					cabin;
+	src:									font-url('Cabin/Cabin-Regular.otf');
 }
 
 /* mixins, variables, etc. */
@@ -43,8 +58,18 @@ $wood-brown:						#c19a6b;
 $pale-brown:						#987654;
 $chamoisee:							#a0785a;
 $chestnut:							#954535;
-$rusty:									#b44f1f;
 $red-orange:						#ea6550;
+$vivid-auburn:					#922724;
+$fall-brown:						#c28359;
+$dark-brown-orange:			#4c2600;
+
+$grenadier:							#c13100;
+
+$rusty:									#b44f1f;
+$fall-orange:						#fa9a54;
+$tawny:									#cc6600;
+
+$fall-gold:							#ffbd32;
 
 $periwinkle:						#a8b2eb;
 
@@ -56,15 +81,30 @@ $periwinkle:						#a8b2eb;
 	margin:								0px;
 }
 
+
 body {
 	color:								white;
 	width:								100%;
 	height:								100%;
 	margin:								0px auto 0px auto;
 	font-family:					chelsea-market;
-	background-color:			$chamoisee;
+	background-color: 		$chamoisee;
+	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
+	/*background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);*/
+	/*background-image: url(http://www.transparenttextures.com/patterns/dark-wood.png);*/
+	/*background-image: url(http://www.transparenttextures.com/patterns/tree-bark.png);*/
+	/*background-image: url(http://www.transparenttextures.com/patterns/nasty-fabric.png);*/
+	/*background-color:			#4c2600;*/
 	/*background:						image-url('fall-drawing.jpg');*/
 
+}
+
+#main-content {
+	width: 1000px;
+	height: 750px;
+	margin: 0px auto;
+	background-color: $chamoisee;
+	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
 }
 
 
@@ -73,7 +113,7 @@ body {
 header#top {
 	padding:							30px 15px;
 	width:								900px;
-	margin:								25px auto 0 auto;
+	margin:								0px auto 0 auto;
 }
 
 header#top h1 {
@@ -96,18 +136,18 @@ header#top h1 {
 	margin:								0px;
 	list-style-type:			none;
 	border:								solid 2px;
-	/*background-color:			none;*/
 	background-color:			white;
 	display:							table;
 	-webkit-padding-start:0px;
 	width:								900px;
-	border-radius:				0px;
+	border-radius:				5px;
+
 }
 
 #main-nav ul li {
 	display:							table-cell;
 	margin:								0px 2px;
-	border-radius:				0px;
+	border-radius:				5px;
 }
 
 #main-nav ul li a {
@@ -118,7 +158,8 @@ header#top h1 {
 }
 
 #main-nav ul li.selected {
-	background-color: 		$button-green;
+	background-color: #90963f;
+	background-image: url(http://www.transparenttextures.com/patterns/blizzard.png);
 }
 
 #main-nav ul li.selected a:visited {
@@ -350,12 +391,72 @@ input:focus, textarea:focus{
 /* carousel */
 
 #home-carousel {
-	margin:								-22px 0px 0px 0px;
+	margin:								10px 0px 0px 0px;
 	border:								solid;
+	border-width:					2px;
+	border-radius:				5px;
 }
 
-.bible .custom-carousel-caption{
+
+img {
+	border-radius: 5px;
 }
+
+.carousel-control.left, .carousel-control.right {
+	background-image: 		none;
+}
+
+.caption {
+	position: absolute;
+
+	h2 {
+		font-family: aaargh;
+		margin: 10px 0px 0px 0px;
+		line-height: 32px;
+	}
+}
+
+.caption-left {
+	top: 5%;
+	left: 5%;
+}
+
+.caption-right {
+	top: 5%;
+	right: 10%;
+}
+
+.caption-narrow {
+	width: 33%;
+}
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left, .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left, .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}
+
 
 /* footer */
 

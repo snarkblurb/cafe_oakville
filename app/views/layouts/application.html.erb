@@ -9,36 +9,38 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-		<header id="top">
-			<h1>
-				<%= image_tag "acorn-left.png", size: "42x42" %>
-				Cafe Oakville
-				<%= image_tag "acorn-right.png", size: "42x42" %>
-			</h1>
-		</header>
+		<div id="main-content">
+			<header id="top">
+				<h1>
+					<%= image_tag "acorn-left.png", size: "42x42" %>
+					Cafe Oakville
+					<%= image_tag "acorn-right.png", size: "42x42" %>
+				</h1>
+			</header>
 
-		<nav id="main-nav">
-			<ul>
-				<%= nav_link_to "Home", root_path, {}, wrapper: 'li' %>	
-				<%= nav_link_to "Menu", menu_path, {}, wrapper: 'li' %>	
-				<%= nav_link_to "Reserve", events_path, {}, wrapper: 'li' %>
-				<%= nav_link_to "Our roots", about_path, {}, wrapper: 'li' %>	
+			<nav id="main-nav">
+				<ul>
+					<%= nav_link_to "Home", root_path, {}, wrapper: 'li' %>	
+					<%= nav_link_to "Menu", menu_path, {}, wrapper: 'li' %>	
+					<%= nav_link_to "Reserve", events_path, {}, wrapper: 'li' %>
+					<%= nav_link_to "Our roots", about_path, {}, wrapper: 'li' %>	
 
-				<% if logged_in? %>
-					<%= nav_link_to "Account", current_user, {}, wrapper: 'li' %>
-					<%= nav_link_to "Log out", logout_path, { method: "delete" }, wrapper: 'li' %>
-				<% else %>
-					<%= nav_link_to "Log in", login_path, {}, wrapper: 'li' %>	
+					<% if logged_in? %>
+						<%= nav_link_to "Account", current_user, {}, wrapper: 'li' %>
+						<%= nav_link_to "Log out", logout_path, { method: "delete" }, wrapper: 'li' %>
+					<% else %>
+						<%= nav_link_to "Log in", login_path, {}, wrapper: 'li' %>	
+					<% end %>
+				</ul>
+			</nav>
+
+			<div id="content">
+				<% flash.each do |message_type, message| %>
+					<%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
 				<% end %>
-			</ul>
-		</nav>
-
-		<div id="content">
-			<% flash.each do |message_type, message| %>
-				<%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-			<% end %>
-			<%= yield %>
-			<%= debug(params) if Rails.env.development? %>
+				<%= yield %>
+				<%= debug(params) if Rails.env.development? %>
+			</div>
 		</div>
 	
 	</body>
