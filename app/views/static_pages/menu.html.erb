@@ -1,32 +1,42 @@
 <% provide(:title, 'Menu') %>
 
-<div id="menu-container">
-	<div class="row">
-		<div id="breakfast" class="cell">
-			<%= image_tag "pancakes.jpg", alt: "pancakes" %>
-			<h2 class="menu-title">Breakfast</h2>
+<div id="menu">
+	<div id="menu-container">
+		<div class="table-row">
+			<div id="breakfast" class="cell">
+				<%= link_to "#" do %>
+					<%= image_tag "pancakes.jpg", alt: "pancakes" %>
+					<h2 class="menu-title">Breakfast</h2>
+				<% end %>
+			</div>
+			<div id="lunch" class="cell">
+				<%= link_to "#" do %>
+					<%= image_tag "sandwich.jpg", alt: "sandwich" %>
+					<h2 class="menu-title">Lunch</h2>
+				<% end %>
+			</div>
 		</div>
-		<div id="lunch" class="cell">
-			<%= image_tag "sandwich.jpg", alt: "sandwich" %>
-			<h2 class="menu-title">Lunch</h2>
+		<div class="table-row">
+			<div id="snacks" class="cell">
+				<%= link_to "#" do %>
+					<%= image_tag "red_apples.jpg", alt: "red apples" %>
+					<h2 class="menu-title">Snacks</h2>
+				<% end %>
+			</div>
+			<div id="drinks" class="cell">
+				<%= link_to "#" do %>
+					<%= image_tag "fall-coffee.jpg", alt: "fall coffee" %>
+					<h2 class="menu-title">Drinks</h2>
+				<% end %>
+			</div>
 		</div>
+
 	</div>
-	<div class="row">
-		<div id="snacks" class="cell">
-			<%= image_tag "red_apples.jpg", alt: "red apples" %>
-			<h2 class="menu-title">Snacks</h2>
-		</div>
-		<div id="drinks" class="cell">
-			<%= image_tag "fall-coffee.jpg", alt: "fall coffee" %>
-			<h2 class="menu-title">Drinks</h2>
-		</div>
+
+
+	<div id="menu-title-oval">
+		<h2>Cafe Oakville</h2>
+		<p>- Menu -</p>
 	</div>
-
-</div>
-
-
-<div id="menu-title-oval">
-	<h2>Cafe Oakville</h2>
-	<p>- Menu -</p>
 </div>
 
