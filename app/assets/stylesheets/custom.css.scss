@@ -246,6 +246,71 @@ header#top h1 {
 
 /* menu */
 
+#menu-container {
+	display:							table;
+	margin-top:						-22px;
+	width:								900px;
+}
+
+.row {
+	display:							table-row;
+}
+
+.cell {
+	display:							table-cell;
+	width:								450px;
+	position: 						relative;
+	font-size: 						150%;
+}
+
+#breakfast {
+	border: solid white 2px;
+}
+
+#lunch {
+	border-top: solid white 2px;
+	border-right: solid white 2px;
+	border-bottom: solid white 2px;
+}
+
+#snacks {
+	border-left: solid white 2px;
+	border-bottom: solid white 2px;
+	border-right: solid white 2px;
+}
+
+#drinks {
+	border-right: solid white 2px;
+	border-bottom: solid white 2px;
+}
+
+.menu-title {
+	position: absolute;
+	top: 39%;
+	width: 100%;
+	text-align: center;
+}
+
+#menu-title-oval {
+	width: 200px;
+	height: 100px;
+	background: $red-orange;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	border: solid 2px white;
+
+	h2, p {
+		text-align: center;
+	}
+
+	h2 {
+		padding-top: 10px;
+	}
+}
+
+
+/*
 section#menu {
 	font-family:					chelsea-market;
 	margin:								0px;
@@ -305,7 +370,7 @@ span.price {
 	margin-left:					.5em;
 }
 
-
+*/
 
 /* about */
 
@@ -376,17 +441,18 @@ input:focus, textarea:focus{
 
 .btn {
 	font-family:					chelsea-market;
-	background-color:			$button-green;
-	border:								solid 1px #72b043;
+	background-color:			#90963f;
+	border:								solid 1px #90963f;
 	border-radius:				5px;
 	float:								none;
 	margin:								5px 0px;
 	color:								white;
+	background-image: url(http://www.transparenttextures.com/patterns/blizzard.png);
 }
 
 .btn:hover {
-	background-color:			$zerply;
-	border:								solid 1px $zerply;
+	background-color:			$button-green;
+	border:								solid 1px $button-green;
 	cursor:								pointer;
 }
 
@@ -429,12 +495,14 @@ input:focus, textarea:focus{
 	border:								solid;
 	border-width:					2px;
 	border-radius:				5px;
+
+
+	img {
+		border-radius: 5px;
+	}
 }
 
 
-img {
-	border-radius: 5px;
-}
 
 .carousel-control.left, .carousel-control.right {
 	background-image: 		none;
