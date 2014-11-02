@@ -48,6 +48,14 @@
 	box-sizing:						border-box;
 }
 
+@mixin opacity_transition {
+	-webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+
 $off-white: 						#fdfdf0;
 $dusty-rose:						#e9a79d;
 
@@ -294,11 +302,20 @@ header#top h1 {
 
 
 .menu-title {
+	background-color: rgba(#000, 0.5);
 	position: absolute;
-	top: 38%;
+	top: 0;
 	width: 100%;
+	height: 100%;
 	text-align: center;
 	color: white;
+	margin: 0px;
+	opacity: 0;
+	@include opacity_transition;
+}
+
+.menu-title:hover {
+	opacity: 1;
 }
 
 #menu {
