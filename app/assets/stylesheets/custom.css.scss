@@ -143,6 +143,7 @@ header#top h1 {
 	margin:								0px auto;
 	text-align:						center;
 	padding:							0px;
+	font-family:					sanchez-regular;
 }
 
 #main-nav ul {
@@ -165,7 +166,7 @@ header#top h1 {
 
 #main-nav ul li a {
 	display: 							block;
-	padding:							5px 0px;
+	padding:							6px 0px 5px 0px;
 	width:								100%;
 	height:								100%;
 }
@@ -302,21 +303,29 @@ header#top h1 {
 
 
 .menu-title {
-	background-color: rgba(#000, 0.5);
+	background-color: rgba(#000, 0.4);
 	position: absolute;
 	top: 0;
 	width: 100%;
 	height: 100%;
-	text-align: center;
 	color: white;
 	margin: 0px;
 	opacity: 0;
 	@include opacity_transition;
+
+	h2 {
+		position: absolute;
+		top: 38%;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	}
 }
 
 .menu-title:hover {
 	opacity: 1;
 }
+
 
 #menu {
 	position: absolute;
