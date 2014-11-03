@@ -55,6 +55,12 @@
   transition: opacity 500ms;
 }
 
+@mixin oval-border-radius {
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 50% / 50%;
+}
+
 
 $off-white: 						#fdfdf0;
 $dusty-rose:						#e9a79d;
@@ -327,6 +333,11 @@ header#top h1 {
 		width: 100%;
 		text-align: center;
 		margin: 0;
+		padding: 0px 60px;
+
+		p {
+			font-family: sanchez-regular;
+		}
 	}
 }
 
@@ -341,23 +352,37 @@ header#top h1 {
 
 #menu-title-oval {
 	position: absolute;
-	top: 37.5%;
-	left: 38.5%;
-	width: 200px;
+	@include oval-border-radius;
+	/*top: 37.5%;*/
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -59.5%);
+	width: 220px;
 	height: 100px;
 	background: #B1484D;
-	-moz-border-radius: 100px / 50px;
-	-webkit-border-radius: 100px / 50px;
-	border-radius: 100px / 50px;
 	border: solid 2px white;
 	font-family: sanchez-regular;
 
-	h2, p {
+	#oval-content {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
 		text-align: center;
-	}
 
-	h2 {
-		padding-top: 8px;
+		* {
+			margin: 0;
+		}
+
+		h2 {
+			padding-top: 8px;
+		}
+
+		p {
+			padding-top: 3px;
+			font-size: 125%;
+		}
+
 	}
 }
 

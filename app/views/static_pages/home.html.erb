@@ -1,92 +1,61 @@
 
-<div id="main">
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#home-carousel").carousel({
-				interval : false,
-				pause: false
-			});
-		});
-	</script>
-
-	<div id="home-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-  <!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
-			<li data-target="#home-carousel" data-slide-to="1"></li>
-			<li data-target="#home-carousel" data-slide-to="2"></li>
-			<li data-target="#home-carousel" data-slide-to="3"></li>
-			<li data-target="#home-carousel" data-slide-to="4"></li>
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-				<%= image_tag "cafe-oakville-scrabble.jpg", alt: "coffee" %>
+<div id="menu">
+	<div id="menu-container">
+		<div class="table-row">
+			<div id="breakfast" class="cell">
+				<%= link_to about_path do %>
+					<%= image_tag "cafe-oakville-scrabble-small.jpg", alt: "scrabble" %>
+					<div class="menu-title">
+						<div class="menu-title-content">
+							<h2>About us</h2>
+							<p>Learn about the people who call Cafe Oakville home.</p>
+						</div>
+					</div>
+				<% end %>
 			</div>
-			<div class="item">
-				<%= image_tag "open-bible.jpg", alt: "bible" %>
-				<div class="caption caption-left">
-					<h2>Enjoy refreshing time in the Word</h2>
-				</div>
+			<div id="lunch" class="cell">
+				<%= link_to menu_path do %>
+					<%= image_tag "cappuccino-coffee-small.jpg", alt: "coffee" %>
+					<div class="menu-title">
+						<div class="menu-title-content">
+							<h2>Menu</h2>
+							<p>Check out the different food and drink we have to offer.</p>
+						</div>
+					</div>
+				<% end %>
 			</div>
-			<div class="item">
-				<%= image_tag "IMG_7073.JPG", alt: "cafe"  %>
-				<div class="caption caption-left caption-narrow">
-					<h2>Study it up at our extendable table space</h2>
-				</div>
-			</div>
-			<div class="item">
-				<%= image_tag "board-games.jpg", alt: "board-games" %>
-				<div class="caption caption-bottom-left">
-					<h2>Enjoy a friendly board game</h2>
-				</div>
-			</div>
-			<div class="item">
-				<%= image_tag "wii.jpg", alt: "wii" %>
-				<div class="caption caption-left">
-					<h2>Pwn some noobs</h2>
-				</div>
-			</div>
-
-			<!--
-			<div class="item">
-				<%= image_tag "risk.jpg", alt: "risk" %>
-				<div class="caption caption-left">
-					<h2>Enjoy a friendly game of Risk</h2>
-				</div>
-			</div>
-			-->
-
 		</div>
-
-		<!-- Controls -->
-		<a class="left carousel-control" href="#home-carousel" role="button" data-slide="prev">
-			<!--
-			<span class="glyphicon glyphicon-chevron-left"></span>
-			-->
-		</a>
-		<a class="right carousel-control" href="#home-carousel" role="button" data-slide="next">
-			<!--
-			<span class="glyphicon glyphicon-chevron-right"></span>
-			-->
-		</a>
+		<div class="table-row">
+			<div id="snacks" class="cell">
+				<%= link_to "#" do %>
+					<%= image_tag "table-studying-small.jpg", alt: "fall coffee" %>
+					<div class="menu-title">
+						<div class="menu-title-content">
+							<h2>Study</h2>
+							<p>Make use of our extendable table space.</p>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<div id="drinks" class="cell">
+				<%= link_to "#" do %>
+					<%= image_tag "chess-small.jpg", alt: "chess" %>
+					<div class="menu-title">
+						<div class="menu-title-content">
+							<h2>Activities</h2>
+							<p>Not in the mood to study? See what else you can do here at Cafe Oakville!</p>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
 	</div>
 
-	<!--
-	<section id="home">
-		<article>
-			<h1>Why come to Cafe Oakville?</h1>
-			<p>
-				<br>- Study it up at our extendable table space,<br>- enjoy a friendly
-				game of Catan or chess, <br>- watch a show/movie on our starry
-				flatscreen TV, <br>- relax to some live music (provided by you),
-				work out, <br>- or get golfing lessons from a pro (schedule
-				dependent)!
-			</p>
-		</article>
-		</section>
-		-->
-</div>
+	<div id="menu-title-oval">
+		<div id="oval-content">
+			<p>A cafe so friendly,</p>
+			<p>it feels like home.</p>
+		</div>
+	</div>
 
+</div>

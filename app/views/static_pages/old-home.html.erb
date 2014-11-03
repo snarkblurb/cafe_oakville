@@ -1,0 +1,92 @@
+
+<div id="main">
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#home-carousel").carousel({
+				interval : false,
+				pause: false
+			});
+		});
+	</script>
+
+	<div id="home-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+  <!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#home-carousel" data-slide-to="1"></li>
+			<li data-target="#home-carousel" data-slide-to="2"></li>
+			<li data-target="#home-carousel" data-slide-to="3"></li>
+			<li data-target="#home-carousel" data-slide-to="4"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<%= image_tag "cafe-oakville-scrabble.jpg", alt: "coffee" %>
+			</div>
+			<div class="item">
+				<%= image_tag "open-bible.jpg", alt: "bible" %>
+				<div class="caption caption-left">
+					<h2>Enjoy refreshing time in the Word</h2>
+				</div>
+			</div>
+			<div class="item">
+				<%= image_tag "IMG_7073.JPG", alt: "cafe"  %>
+				<div class="caption caption-left caption-narrow">
+					<h2>Study it up at our extendable table space</h2>
+				</div>
+			</div>
+			<div class="item">
+				<%= image_tag "board-games.jpg", alt: "board-games" %>
+				<div class="caption caption-bottom-left">
+					<h2>Enjoy a friendly board game</h2>
+				</div>
+			</div>
+			<div class="item">
+				<%= image_tag "wii.jpg", alt: "wii" %>
+				<div class="caption caption-left">
+					<h2>Pwn some noobs</h2>
+				</div>
+			</div>
+
+			<!--
+			<div class="item">
+				<%= image_tag "risk.jpg", alt: "risk" %>
+				<div class="caption caption-left">
+					<h2>Enjoy a friendly game of Risk</h2>
+				</div>
+			</div>
+			-->
+
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#home-carousel" role="button" data-slide="prev">
+			<!--
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			-->
+		</a>
+		<a class="right carousel-control" href="#home-carousel" role="button" data-slide="next">
+			<!--
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			-->
+		</a>
+	</div>
+
+	<!--
+	<section id="home">
+		<article>
+			<h1>Why come to Cafe Oakville?</h1>
+			<p>
+				<br>- Study it up at our extendable table space,<br>- enjoy a friendly
+				game of Catan or chess, <br>- watch a show/movie on our starry
+				flatscreen TV, <br>- relax to some live music (provided by you),
+				work out, <br>- or get golfing lessons from a pro (schedule
+				dependent)!
+			</p>
+		</article>
+		</section>
+		-->
+</div>
+
