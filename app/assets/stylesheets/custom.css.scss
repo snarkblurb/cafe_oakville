@@ -103,10 +103,13 @@ body {
 	font-family:					chelsea-market;
 	background-color: 		$chamoisee;
 	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
+	/*background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);*/
 	/*background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);*/
 	/*background-image: url(http://www.transparenttextures.com/patterns/dark-wood.png);*/
 	/*background-image: url(http://www.transparenttextures.com/patterns/tree-bark.png);*/
 	/*background-image: url(http://www.transparenttextures.com/patterns/nasty-fabric.png);*/
+	/*background-image: url(http://www.transparenttextures.com/patterns/xv.png);*/
+
 	/*background-color:			#4c2600;*/
 	/*background:						image-url('fall-drawing.jpg');*/
 
@@ -118,6 +121,11 @@ body {
 	margin: 0px auto;
 	background-color: $chamoisee;
 	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
+	/*background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);*/
+	/*background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);*/
+	/*background-image: url(http://www.transparenttextures.com/patterns/xv.png);*/
+
+
 }
 
 
@@ -166,7 +174,7 @@ header#top h1 {
 
 #main-nav ul li a {
 	display: 							block;
-	padding:							6px 0px 5px 0px;
+	padding:							5px 0px 2px 0px;
 	width:								100%;
 	height:								100%;
 }
@@ -185,9 +193,8 @@ header#top h1 {
 #main-nav ul li a:link, #main-nav ul li a:visited {
 	text-decoration:			none;
 	font-weight:					bold;
-	font-size:						.9em;
+	font-size:						1em;
 	color:								$chamoisee;
-	/*color:								white;*/
 	display:							block;
 }
 
@@ -313,9 +320,10 @@ header#top h1 {
 	opacity: 0;
 	@include opacity_transition;
 
-	h2 {
+	.menu-title-content {
 		position: absolute;
-		top: 38%;
+		top: 50%;
+		transform: translateY(-50%);
 		width: 100%;
 		text-align: center;
 		margin: 0;
