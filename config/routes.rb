@@ -15,6 +15,8 @@ CafeOakville::Application.routes.draw do
 	get 'events/new' => 'events#new'
 
 	resources :users
+	resources :events, only: [:create, :destroy]
+	resources :reservations, only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

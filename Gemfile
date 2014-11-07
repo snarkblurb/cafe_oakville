@@ -17,7 +17,12 @@ gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
 gem 'nav_lynx'
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
+
+group :development do
+	gem 'better_errors'
+	gem 'binding_of_caller'
+end
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

@@ -107,7 +107,7 @@ body {
 	height:								100%;
 	margin:								0px auto 0px auto;
 	font-family:					chelsea-market;
-	background-color: 		$chamoisee;
+	background-color: 		#9b7653;
 	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
 	/*background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);*/
 	/*background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);*/
@@ -125,7 +125,7 @@ body {
 	width: 1000px;
 	height: 750px;
 	margin: 0px auto;
-	background-color: $chamoisee;
+	background-color: #9b7653;
 	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
 	/*background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);*/
 	/*background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);*/
@@ -257,7 +257,7 @@ header#top h1 {
 .event-user-list {
 	margin:								0;
 	li {
-		font-size:					.7em;
+		font-size:					1em;
 	}
 }
 
@@ -387,67 +387,6 @@ header#top h1 {
 }
 
 
-/*
-section#menu {
-	font-family:					chelsea-market;
-	margin:								0px;
-}
-
-
-div#menu-container ul {
-	padding:							0px;
-	list-style-type:			none;
-	width:								220px;
-	margin:								0px auto;
-}
-
-div#menu-container ul li {
-	padding:							10px 0px;
-	margin:								0px auto;
-}
-
-#breakfast h2, #lunch h2, #beverages h2 {
-	text-align:						center;
-	margin:								20px 0px 0px 0px;	
-}
-
-#breakfast, #lunch, #beverages {
-	line-height:					.8em;
-}
-
-#breakfast, #beverages {
-}
-
-#breakfast {
-	margin:								0px 50px 30px 140px;
-	float:								left;
-}
-
-#lunch {
-	float:								left;
-	margin:								0px 50px 20px 140px;
-}
-
-#beverages {
-	margin:							  0px 140px 0px 50px;
-	float:								right;
-}
-
-#breakfast ul, #lunch ul, #beverages ul {
-	font-size:						1.2em;
-}
-
-
-span.dots {
-	float:								right;
-}
-
-span.price {
-	float:								right;
-	margin-left:					.5em;
-}
-
-*/
 
 /* about */
 
@@ -491,7 +430,6 @@ span.price {
 }
 
 form {
-	/*width:								280px;*/
 	width:								100%;
 	margin:								0px auto 0px auto;
 }
@@ -513,25 +451,41 @@ input {
 	color:								black;
 }
 
-input:focus, textarea:focus{
+input:focus, textarea:focus {
 	outline:							none;
 }
 
 .btn {
 	font-family:					chelsea-market;
-	background-color:			#90963f;
-	border:								solid 1px #90963f;
 	border-radius:				5px;
 	float:								none;
 	margin:								5px 0px;
 	color:								white;
-	background-image: url(http://www.transparenttextures.com/patterns/blizzard.png);
 }
 
 .btn:hover {
-	background-color:			$button-green;
-	border:								solid 1px $button-green;
 	cursor:								pointer;
+}
+
+.btn-primary {
+	background-color:			#90963f;
+	border:								solid 1px #90963f;
+}
+
+.btn-primary:hover {
+	background-color:			#99a034;
+	border:								solid 1px #99a034;
+}
+
+.btn-cancel {
+	background-color:			#b45e45;
+	border:								solid 1px #874633;
+}
+
+.btn-cancel:hover {
+	background-color:			#c15637;
+	border:								solid 1px #874533;
+	color:								white;
 }
 
 #error_explanation {

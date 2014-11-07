@@ -13,7 +13,7 @@
 
 	<ul>
 		<% @user.events.each do |event| %>
-			<%= link_to event.day.strftime('%B %-d, %Y'), events_path %>
+			<li><%= event.day.strftime('%B %-d, %Y') %></li>
 		<% end %>
 	</ul>
 </div>
