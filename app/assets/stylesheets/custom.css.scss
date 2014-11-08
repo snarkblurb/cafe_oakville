@@ -65,33 +65,43 @@
 $off-white: 						#fdfdf0;
 $dusty-rose:						#e9a79d;
 
-$granny-smith-apple:		#a8e4a0;
-$dark-sea-green:				#8fbc8f;
 $zerply:								#9dcc7a;
 $string-green:					#82923a;
 $forest-green:					#566435;
-$mantis:								#74c365;
-$button-green:					#8bc262;
+$button-green:					#90963f;
 
 $wood-brown:						#c19a6b;
 $pale-brown:						#987654;
 $chamoisee:							#a0785a;
 $chestnut:							#954535;
-$red-orange:						#ea6550;
-$vivid-auburn:					#922724;
 $fall-brown:						#c28359;
 $dark-brown-orange:			#4c2600;
-
-$grenadier:							#c13100;
 
 $rusty:									#b44f1f;
 $fall-orange:						#fa9a54;
 $tawny:									#cc6600;
+$tawny-dark:						#cd5700;
+$fall-button-orange:		#cc6027;
 
 $fall-gold:							#ffbd32;
 
 $periwinkle:						#a8b2eb;
 
+$dark-fall-red:					#9f381b;
+$vivid-auburn:					#922724;
+$red-orange:						#ea6550;
+$grenadier:							#c13100;
+$fall-maroon:						#b1484d;
+
+
+$dark-fabric-texture:		url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
+$black-linen-texture:		url(http://www.transparenttextures.com/patterns/black-linen.png);
+$light-fabric-texture: 	url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
+$dark-wood-texture:			url(http://www.transparenttextures.com/patterns/dark-wood.png);
+$tree-bark-texture:			url(http://www.transparenttextures.com/patterns/tree-bark.png);
+$nasty-fabric-texture:	url(http://www.transparenttextures.com/patterns/nasty-fabric.png);
+$xv-texture:						url(http://www.transparenttextures.com/patterns/xv.png);
+$blizzard-texture: 			url(http://www.transparenttextures.com/patterns/blizzard.png);
 
 
 /* body */
@@ -107,30 +117,16 @@ body {
 	height:								100%;
 	margin:								0px auto 0px auto;
 	font-family:					chelsea-market;
-	background-color: 		#9b7653;
-	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
-	/*background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);*/
-	/*background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);*/
-	/*background-image: url(http://www.transparenttextures.com/patterns/dark-wood.png);*/
-	/*background-image: url(http://www.transparenttextures.com/patterns/tree-bark.png);*/
-	/*background-image: url(http://www.transparenttextures.com/patterns/nasty-fabric.png);*/
-	/*background-image: url(http://www.transparenttextures.com/patterns/xv.png);*/
-
-	/*background-color:			#4c2600;*/
-	/*background:						image-url('fall-drawing.jpg');*/
-
+	background-color: 		$chamoisee;
+	background-image: 		$dark-fabric-texture;
 }
 
 #main-content {
-	width: 1000px;
-	height: 750px;
-	margin: 0px auto;
-	background-color: #9b7653;
-	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
-	/*background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);*/
-	/*background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);*/
-	/*background-image: url(http://www.transparenttextures.com/patterns/xv.png);*/
-
+	width: 								1000px;
+	height: 							750px;
+	margin: 							0px auto;
+	background-color: 		$chamoisee;
+	background-image: 		$dark-fabric-texture;
 
 }
 
@@ -186,12 +182,10 @@ header#top h1 {
 }
 
 #main-nav ul li.selected {
-	background-color: #90963f;
-	background-image: url(http://www.transparenttextures.com/patterns/blizzard.png);
+	background: 					$button-green;
 }
 
 #main-nav ul li.selected a:visited {
-	background-color:			$zerply;
 	color:								white;
 	display:							block;
 }
@@ -200,7 +194,7 @@ header#top h1 {
 	text-decoration:			none;
 	font-weight:					bold;
 	font-size:						1em;
-	color:								$chamoisee;
+	color:								$dark-fall-red;
 	display:							block;
 }
 
@@ -432,7 +426,12 @@ header#top h1 {
 form {
 	width:								100%;
 	margin:								0px auto 0px auto;
+
+	label {
+		font-family:				sanchez-regular;
+	}
 }
+
 
 input, textarea, select, .uneditable-input {
 	border: 							0px solid #bbb;
@@ -456,11 +455,12 @@ input:focus, textarea:focus {
 }
 
 .btn {
-	font-family:					chelsea-market;
+	font-family:					sanchez-regular;
 	border-radius:				5px;
 	float:								none;
 	margin:								5px 0px;
 	color:								white;
+	background-image: 		$blizzard-texture;
 }
 
 .btn:hover {
@@ -468,23 +468,23 @@ input:focus, textarea:focus {
 }
 
 .btn-primary {
-	background-color:			#90963f;
-	border:								solid 1px #90963f;
+	background-color:			$button-green;
+	border:								solid 1px $button-green;
 }
 
 .btn-primary:hover {
-	background-color:			#99a034;
-	border:								solid 1px #99a034;
+	background-color:			#bf8d38;
+	border:								solid 1px #bf8d38;
 }
 
 .btn-cancel {
-	background-color:			#b45e45;
-	border:								solid 1px #874633;
+	background-color:			$button-green;
+	border:								solid 1px $button-green;
 }
 
 .btn-cancel:hover {
-	background-color:			#c15637;
-	border:								solid 1px #874533;
+	background-color:			$button-green;
+	border:								solid 1px $button-green;
 	color:								white;
 }
 

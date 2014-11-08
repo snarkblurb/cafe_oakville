@@ -10,9 +10,9 @@ class ReservationsController < ApplicationController
 	end
 
 	def destroy
-		reservation = Reservation.find_by(event_id: params[:reservation][:event_id],
+		@reservation = Reservation.find_by(event_id: params[:reservation][:event_id],
 																			user_id: params[:reservation][:user_id])
-		reservation.destroy
+		@reservation.destroy
 		redirect_to events_path
 	end
 

@@ -7,12 +7,14 @@
 
 	<p>
 		<% if current_user?(@user) %>
-			<%= link_to "Edit", edit_user_path(current_user) %>
+			<%= link_to edit_user_path(current_user) do %>
+				Edit
+			<% end %>
 		<% end %>
 	</p>
 
 	<ul>
-		<% @user.events.each do |event| %>
+		<% @events.order("day ASC").each do |event| %>
 			<li><%= event.day.strftime('%B %-d, %Y') %></li>
 		<% end %>
 	</ul>
