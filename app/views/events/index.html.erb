@@ -3,23 +3,43 @@
 <h1>Reserve a spot</h1>
 
 <div class="row">
-	<div class="col-md-4 col-md-offset-4">
+	<div class="events-content">
 		<% @events.each do |event| %>
-			<div><%= event.day.strftime("%B %-d, %Y") %></div>
 			<% if !@user.reservations.find_by(event_id: event.id) %>
-				<%= form_for(@user.reservations.build(event_id: event.id)) do |f| %>
+				<%= form_for @user.reservations.build(event_id: event.id)	do |f| %>
 					<%= f.hidden_field :event_id, value: event.id %>
 					<%= f.hidden_field :user_id, value: @user.id %>
-					<%= f.submit "Sign up", class: "btn btn-primary" %>
+					<div class="event-line-container">
+						<div class="event-row">
+							<div class="date-cell"><%= event.day.strftime("%B %-d, %Y") %></div>
+							<div class="button-cell"><%= f.submit "Sign up", class: "btn btn-primary" %></div>
+							<div class="button-cell"></div>
+						</div>
+					</div>
 				<% end %>
 			<% else %>
-				<%= form_for(@user.reservations.find_by(event_id: event.id),
-					html: { method: :delete }) do |f| %>
+				<%= form_for @user.reservations.find_by(event_id: event.id),
+					html: { method: :delete } do |f| %>
 					<%= f.hidden_field :event_id, value: event.id %>
 					<%= f.hidden_field :user_id, value: @user.id %>
-					<%= f.submit "Cancel", class: "btn btn-cancel" %>
+					<div class="event-line-container">
+						<div class="event-row">
+							<div class="date-cell"><%= event.day.strftime("%B %-d, %Y") %></div>
+							<div class="button-cell"><%= f.submit "Signed up", class: "btn btn-primary disabled" %></div>
+							<div class="button-cell"><%= f.submit "Cancel", class: "btn btn-cancel" %></div>
+						</div>
+					</div>
 				<% end %>
 			<% end %>
+
+			<ul class="event-user-list">
+			<% if !event.users.empty? %>
+				<% event.users.each do |u| %>
+					<li><%= u.name %></li>
+				<% end %>
+			<% end %>
+			</ul>
+
 		<% end %>
 		
 	</div>

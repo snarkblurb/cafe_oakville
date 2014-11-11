@@ -40,6 +40,11 @@
 	src:									font-url('Sanchezregular.otf');
 }
 
+@font-face {
+	font-family:					arvo;
+	src:									font-url('Arvo/Arvo-Regular.ttf');
+}
+
 /* mixins, variables, etc. */
 
 @mixin box_sizing {
@@ -84,6 +89,13 @@ $tawny-dark:						#cd5700;
 $fall-button-orange:		#cc6027;
 
 $fall-gold:							#ffbd32;
+$gold:									#bf8d38;
+/*$gold:									#cf9127;*/
+$dark-gold:							#8f6929;
+$light-gold:						#eaca94;
+$desaturated-gold:			#ae8848;
+/*$saturated-gold:				#e39612;*/
+$saturated-gold:				#cf9127;
 
 $periwinkle:						#a8b2eb;
 
@@ -172,7 +184,9 @@ header#top h1 {
 	display:							table-cell;
 	margin:								0px 2px;
 	border-radius:				5px;
+	@include opacity_transition;
 }
+
 
 #main-nav ul li a {
 	display: 							block;
@@ -182,7 +196,7 @@ header#top h1 {
 }
 
 #main-nav ul li.selected {
-	background: 					$button-green;
+	background: 					$gold $blizzard-texture;
 }
 
 #main-nav ul li.selected a:visited {
@@ -194,7 +208,7 @@ header#top h1 {
 	text-decoration:			none;
 	font-weight:					bold;
 	font-size:						1em;
-	color:								$dark-fall-red;
+	color:								$chamoisee;
 	display:							block;
 }
 
@@ -208,23 +222,20 @@ header#top h1 {
 	margin:								0px auto 50px auto;
 	padding-top:					20px;
 
-}
+	h1 {
+		text-align:						center;
+		margin:								0px 0px 20px 0px;
+		font-size:						200%;
+		padding-top:					30px;
+	}
 
-#content h1 {
-	text-align:						center;
-	margin:								0px 0px 20px 0px;
-	font-size:						200%;
-	padding-top:					30px;
-}
+	a, a:visited {
+		color:								$gold;
+	}
 
-#content a, #content a:visited {
-	/*color:								#97a3da;*/
-	/*color:								#db9e45;*/
-	color:								#e3741e;
-}
-
-#content h2 {
-	font-size:						150%;
+	h2 {
+		font-size:						150%;
+	}
 }
 
 
@@ -249,9 +260,10 @@ header#top h1 {
 }
 
 .event-user-list {
-	margin:								0;
+	margin-bottom:				30px;
 	li {
 		font-size:					1em;
+		font-family:				sanchez-regular;
 	}
 }
 
@@ -278,6 +290,7 @@ header#top h1 {
 
 .table-row {
 	display:							table-row;
+	position:							relative;
 }
 
 .cell {
@@ -286,6 +299,7 @@ header#top h1 {
 	position: 						relative;
 	font-size: 						150%;
 }
+
 
 #breakfast {
 	border: solid white 2px;
@@ -454,6 +468,7 @@ input:focus, textarea:focus {
 	outline:							none;
 }
 
+
 .btn {
 	font-family:					sanchez-regular;
 	border-radius:				5px;
@@ -465,28 +480,34 @@ input:focus, textarea:focus {
 
 .btn:hover {
 	cursor:								pointer;
+	color:								white;
 }
 
 .btn-primary {
-	background-color:			$button-green;
-	border:								solid 1px $button-green;
+	background-color:			$gold;
+	border:								solid 1px $dark-gold;
 }
 
 .btn-primary:hover {
-	background-color:			#bf8d38;
-	border:								solid 1px #bf8d38;
+	background-color:			$saturated-gold;
+	border:								solid 1px $dark-gold;
+}
+
+.btn-primary.disabled {
+ 	background-color:			#909090;
+	border:								solid 1px #6c6c6c;
 }
 
 .btn-cancel {
-	background-color:			$button-green;
-	border:								solid 1px $button-green;
+	background-color:			#b1484d;
+	border:								solid 1px #843639;
 }
 
 .btn-cancel:hover {
-	background-color:			$button-green;
-	border:								solid 1px $button-green;
-	color:								white;
+	background-color:			#be3a41;
+	border:								solid 1px #843639;
 }
+
 
 #error_explanation {
 }
@@ -616,3 +637,33 @@ footer {
 	margin-top:						45px;
 	@include box_sizing;
 }
+
+.events-content{
+	margin: 0 auto;
+	width: 330px;
+}
+
+.event-line-container {
+	display: table;
+	width: 100%;
+}
+
+.event-row {
+	display: table-row;
+	padding-right: 10px;
+}
+
+.date-cell {
+	display: table-cell;
+	width: 40%;
+}
+
+.button-cell {
+	display: table-cell;
+	width: 30%;
+	padding-left: 10px;
+	input {
+		font-family: sanchez-regular;
+	}
+}
+
