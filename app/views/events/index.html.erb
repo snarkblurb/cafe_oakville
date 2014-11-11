@@ -5,6 +5,7 @@
 <div class="row">
 	<div class="events-content">
 		<% @events.each do |event| %>
+
 			<% if !@user.reservations.find_by(event_id: event.id) %>
 				<%= form_for @user.reservations.build(event_id: event.id)	do |f| %>
 					<%= f.hidden_field :event_id, value: event.id %>
@@ -17,6 +18,7 @@
 						</div>
 					</div>
 				<% end %>
+
 			<% else %>
 				<%= form_for @user.reservations.find_by(event_id: event.id),
 					html: { method: :delete } do |f| %>
@@ -41,7 +43,19 @@
 			</ul>
 
 		<% end %>
-		
+
+		<% if @user.admin? %>
+			<div class="row">
+				<div class="col-centered">
+					<%= form_for @event do |f| %>
+						<%= f.label :day, "Day" %>
+						<%= f.datetime_field("day") %>
+
+						<%= f.submit "Add event", class: "btn btn-primary" %>
+					<% end %>
+				</div>
+			</div>	
+		<% end %>
 	</div>
 </div>
 

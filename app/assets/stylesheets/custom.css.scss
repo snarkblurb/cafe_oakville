@@ -433,6 +433,7 @@ header#top h1 {
 
 /* forms */
 
+
 #sign-up {
 	margin:								0px;
 }
@@ -446,6 +447,11 @@ form {
 	}
 }
 
+
+.col-centered {
+	width:								280px;
+	margin:								0 auto;
+}
 
 input, textarea, select, .uneditable-input {
 	border: 							0px solid #bbb;
