@@ -1,14 +1,15 @@
 class EventsController < ApplicationController
 	before_action :logged_in_user, only: [:index, :create, :destroy]
+	before_action :correct_user, only: :destroy
 
 	def index
-		@events = Event.all
+		@events = Event.all.order("day ASC")
 		@user = current_user
 		@event = @events.build if @user.admin?
 	end
 
   def create
-		@events = Event.all
+		@events = Event.all.order("day ASC")
 		@event = @events.build(event_params)
 		if @event.save
 			flash[:success] = "Event created!"
@@ -19,6 +20,9 @@ class EventsController < ApplicationController
   end
 	
 	def destroy
+		@event.destroy
+		flash[:success] = "Event deleted"
+		redirect_to events_path
 	end
 
 	private
@@ -32,6 +36,11 @@ class EventsController < ApplicationController
 				flash[:danger] = "Please log in."
 				redirect_to(login_url) 
 			end
+		end
+
+		def correct_user
+			@event = Event.find_by(id: params[:id])
+			redirect_to root_url if @event.nil?
 		end
 
 end

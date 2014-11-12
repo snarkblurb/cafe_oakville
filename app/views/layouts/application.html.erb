@@ -22,7 +22,11 @@
 				<ul>
 					<%= nav_link_to "Home", root_path, {}, wrapper: 'li' %>	
 					<%= nav_link_to "Menu", menu_path, {}, wrapper: 'li' %>	
-					<%= nav_link_to "Reserve", events_path, {}, wrapper: 'li' %>
+					<% if @user and @user.admin? %>
+						<%= nav_link_to "Events", events_path, {}, wrapper: 'li' %>
+					<% else %>
+						<%= nav_link_to "Reserve", events_path, {}, wrapper: 'li' %>
+					<% end %>
 					<%= nav_link_to "Our roots", about_path, {}, wrapper: 'li' %>	
 
 					<% if logged_in? %>

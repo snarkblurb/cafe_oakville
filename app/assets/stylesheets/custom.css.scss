@@ -120,6 +120,7 @@ $blizzard-texture: 			url(http://www.transparenttextures.com/patterns/blizzard.p
 
 * {
 	margin:								0px;
+	padding:							0;
 }
 
 
@@ -261,6 +262,8 @@ header#top h1 {
 
 .event-user-list {
 	margin-bottom:				30px;
+	margin-left:					25%;
+
 	li {
 		font-size:					1em;
 		font-family:				sanchez-regular;
@@ -453,12 +456,18 @@ form {
 	margin:								0 auto;
 }
 
+.col-right {
+	width:								280px;
+	float: 								right;
+}
+
 input, textarea, select, .uneditable-input {
 	border: 							0px solid #bbb;
 	width: 								100%;
 	margin-bottom: 				15px;
 	font-size:						.9em;
 	font-family:					sans-serif;
+	color: black;
 }
 
 input {
@@ -646,7 +655,15 @@ footer {
 
 .events-content{
 	margin: 0 auto;
-	width: 330px;
+	width: 360px;
+}
+
+.admin-events-content {
+	width: 360px;
+	margin-left: 100px;
+	h2 {
+		margin-left: 30%;
+	}
 }
 
 .event-line-container {
@@ -666,10 +683,39 @@ footer {
 
 .button-cell {
 	display: table-cell;
-	width: 30%;
+	width: 20%;
 	padding-left: 10px;
+
 	input {
 		font-family: sanchez-regular;
 	}
 }
 
+.delete-cell {
+	display: table-cell;
+	width: 20%;
+	text-align: center;
+	a, a:visited {
+		color: $light-gold !important;
+	}
+}
+
+
+/* Add event */
+
+select.form-control {
+	display: inline;
+	width: 25%;
+	margin-bottom: 5px;
+}
+
+select#event_day_2i {
+	width: 40%;
+}
+
+label[for=event_day] {
+	width: 100%;
+}
+
+#add-event.btn-add-event {
+}	

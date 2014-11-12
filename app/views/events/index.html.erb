@@ -1,6 +1,10 @@
 <% provide(:title, 'All events') %>
 
-<h1>Reserve a spot</h1>
+<% if @user.admin? %>
+	<h1>Manage Events</h1>
+<% else %>
+	<h1>Reserve a spot</h1>
+<% end %>
 
 <div class="row">
 	<div class="events-content">
@@ -12,6 +16,12 @@
 					<%= f.hidden_field :user_id, value: @user.id %>
 					<div class="event-line-container">
 						<div class="event-row">
+							<div class="delete-cell">
+								<% if @user.admin? %>
+								<%= link_to "delete", event, method: :delete, 
+									data: { confirm: "You sure?" }, title: event.day.strftime("%B %-d, %Y") %>
+								<% end %>
+							</div>
 							<div class="date-cell"><%= event.day.strftime("%B %-d, %Y") %></div>
 							<div class="button-cell"><%= f.submit "Sign up", class: "btn btn-primary" %></div>
 							<div class="button-cell"></div>
@@ -21,11 +31,17 @@
 
 			<% else %>
 				<%= form_for @user.reservations.find_by(event_id: event.id),
-					html: { method: :delete } do |f| %>
+						html: { method: :delete } do |f| %>
 					<%= f.hidden_field :event_id, value: event.id %>
 					<%= f.hidden_field :user_id, value: @user.id %>
 					<div class="event-line-container">
 						<div class="event-row">
+							<div class="delete-cell">
+								<% if @user.admin? %>
+								<%= link_to "delete", event, method: :delete, 
+										data: { confirm: "You sure?" }, title: event.day.strftime("%B %-d, %Y") %>
+								<% end %>
+							</div>
 							<div class="date-cell"><%= event.day.strftime("%B %-d, %Y") %></div>
 							<div class="button-cell"><%= f.submit "Signed up", class: "btn btn-primary disabled" %></div>
 							<div class="button-cell"><%= f.submit "Cancel", class: "btn btn-cancel" %></div>
@@ -34,61 +50,37 @@
 				<% end %>
 			<% end %>
 
+
 			<ul class="event-user-list">
-			<% if !event.users.empty? %>
-				<% event.users.each do |u| %>
-					<li><%= u.name %></li>
+				<% if !event.users.empty? %>
+					<% event.users.each do |u| %>
+						<li><%= u.name %></li>
+					<% end %>
 				<% end %>
-			<% end %>
 			</ul>
 
 		<% end %>
 
 		<% if @user.admin? %>
-			<div class="row">
-				<div class="col-centered">
-					<%= form_for @event do |f| %>
-						<%= f.label :day, "Day" %>
-						<%= f.datetime_field("day") %>
+			<div id="add-event">
+				<div class="row">
+					<div class="col-centered">
+						<%= form_for @event do |f| %>
+							<%= render 'shared/error_messages', object: f.object %>
 
-						<%= f.submit "Add event", class: "btn btn-primary" %>
-					<% end %>
-				</div>
-			</div>	
+							<%= f.label :day, "Add date" %>
+							<%= f.date_select "day",	{ prompt: { year: 'Year', month: 'Month', day: 'Day' },
+																					order: [:month, :day, :year],
+																					start_year: 2014, end_year: 2016 }, 
+																			 { class: 'form-control' } %>
+
+							<%= f.submit "Add event", class: "btn btn-primary" %>
+						<% end %>
+					</div>
+				</div>	
+			</div>
 		<% end %>
 	</div>
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-<!--
-<div id="all-events">
-  <h1>All events</h1>
-
-  <ul class="events">
-  <% @events.each do |event| %>
-		<li class="date-section"><%= event.day.strftime("%B %-d, %Y") %></li>
-			<ul class="event-user-list">
-				<% if !event.users.empty? %>
-					<% event.users.each do |user| %>
-						<li><%= user.name %></li>
-					<% end %>
-				<% end %>
-			</ul>
-	<% end %>
-	</ul>
-
-	<p>
-		<%= link_to "Add event", events_new_path %>
-	</p>
-</div>
--->
