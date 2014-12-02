@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(user_params)
+		@user.admin = admin_email?
 		if @user.save
 			# Handle a successful save.
 			log_in @user
@@ -65,6 +66,12 @@ class UsersController < ApplicationController
 		def correct_user
 			@user = User.find(params[:id])
 			redirect_to(root_url) unless current_user?(@user)
+		end
+
+		def admin_email?
+			admin_emails = %w[zakkoltun@gmail.com keithfong25@gmail.com noliewoo@gmail.com
+												abraham.choe@gmail.com joeyu51788@gmail.com]
+			admin_emails.include? @user.email
 		end
 		
 end

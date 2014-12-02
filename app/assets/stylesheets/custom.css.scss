@@ -121,6 +121,7 @@ $blizzard-texture: 			url(http://www.transparenttextures.com/patterns/blizzard.p
 * {
 	margin:								0px;
 	padding:							0;
+	-webkit-font-smoothing: antialiased;
 }
 
 
@@ -231,7 +232,7 @@ header#top h1 {
 	}
 
 	a, a:visited {
-		color:								$gold;
+		color:								$light-gold;
 	}
 
 	h2 {
@@ -327,7 +328,7 @@ header#top h1 {
 
 
 .menu-title {
-	background-color: rgba(#000, 0.4);
+	background-color: rgba(#000, 0.5);
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -348,6 +349,7 @@ header#top h1 {
 
 		p {
 			font-family: sanchez-regular;
+
 		}
 	}
 }
@@ -707,6 +709,7 @@ select.form-control {
 	display: inline;
 	width: 25%;
 	margin-bottom: 5px;
+	font-family: sanchez-regular;
 }
 
 select#event_day_2i {
@@ -717,5 +720,5 @@ label[for=event_day] {
 	width: 100%;
 }
 
-#add-event.btn-add-event {
+.btn-add-event {
 }	
