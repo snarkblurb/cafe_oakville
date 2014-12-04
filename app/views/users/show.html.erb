@@ -8,11 +8,11 @@
 	<p>
 		<% if current_user?(@user) %>
 			<%= link_to edit_user_path(current_user) do %>
-				Edit
+				Edit account
 			<% end %>
 		<% end %>
 	</p>
-
+	<h2>My dates</h2>
 	<ul>
 		<% @events.order("day ASC").each do |event| %>
 			<li><%= event.day.strftime('%B %-d, %Y') %></li>
