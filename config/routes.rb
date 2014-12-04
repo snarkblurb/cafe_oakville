@@ -4,6 +4,7 @@ CafeOakville::Application.routes.draw do
 
 	get 'menu' => 'static_pages#menu'
 	get 'about' => 'static_pages#about'
+	get 'activities' => 'static_pages#activities'
 
 	get 'signup' => 'users#new'
 

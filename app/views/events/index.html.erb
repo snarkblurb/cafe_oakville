@@ -23,7 +23,9 @@
 								<% end %>
 							</div>
 							<div class="date-cell"><%= event.day.strftime("%B %-d, %Y") %></div>
-							<div class="button-cell"><%= f.submit "Sign up", class: "btn btn-primary" %></div>
+							<div class="button-cell">
+								<%= f.submit "Sign up", class: "btn btn-primary" %>
+							</div>
 							<div class="button-cell"></div>
 						</div>
 					</div>
@@ -43,7 +45,9 @@
 								<% end %>
 							</div>
 							<div class="date-cell"><%= event.day.strftime("%B %-d, %Y") %></div>
-							<div class="button-cell"><%= f.submit "Signed up", class: "btn btn-primary disabled" %></div>
+							<div class="button-cell">
+								<%= f.submit "Signed up", class: "btn btn-primary disabled" %>
+							</div>
 							<div class="button-cell"><%= f.submit "Cancel", class: "btn btn-cancel" %></div>
 						</div>
 					</div>
@@ -69,10 +73,13 @@
 							<%= render 'shared/error_messages', object: f.object %>
 
 							<%= f.label :day, "Add date" %>
-							<%= f.date_select "day",	{ prompt: { year: 'Year', month: 'Month', day: 'Day' },
-																					order: [:month, :day, :year],
-																					start_year: 2014, end_year: 2016 }, 
-																			 { class: 'form-control' } %>
+							<%= f.date_select "day",	{ prompt: 
+																						{ year: 'Year', month: 'Month', day: 'Day' },
+																						order: [:month, :day, :year],
+																						start_year: 2014, end_year: 2016 }, 
+																					{ class: 'form-control' } %>
+							<%= f.label :note %>
+							<%= f.text_field :note, class: 'form-control' %>
 
 							<%= f.submit "Add event", class: "btn btn-primary btn-add-event" %>
 						<% end %>

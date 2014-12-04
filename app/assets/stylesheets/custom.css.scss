@@ -243,7 +243,7 @@ header#top h1 {
 
 /* users */
 
-#all-users, #show-user, #all-events {
+#all-users, #show-user, #all-events, #activities-content {
 	margin:								0px 50px;
 	p, ul {
 		font-size:					125%;
@@ -406,33 +406,35 @@ header#top h1 {
 #about-wrapper {
 	width:								100%;
 	height:								100%;
-	background-image:			image-url('IMG_7102.JPG');
+	//background-image:			image-url('IMG_7102.JPG');
 	margin-top:						-22px;
 	border-radius:				5px;
-	border:								solid 2px;
+	//border:								solid 2px;
 
 	#about {
 		position:						relative;
-		width:							450px;
+		width:							500px;
 		margin:							0px auto;
 		padding-top:				20px;
 
 		h1 {
 			text-align:				center;
-			margin-top:				50px;
 		}
 
 		#about-content {
-			margin-top:				50px;
 			padding:					10px;
-			background-color: rgba(0, 0, 0, 0.3);
 			border-radius:		10px;
 
 			p {
-				font-family:			aaargh;
+				font-family:			enriqueta;
+				font-size: 				110%;
 			}
 		}
 	}
+}
+
+.about-section {
+	margin-bottom: 30px;
 }
 
 
@@ -704,6 +706,12 @@ footer {
 
 
 /* Add event */
+
+/*
+.form-control {
+	padding: 2px 5px 2px 5px;
+}
+	*/
 
 select.form-control {
 	display: inline;
