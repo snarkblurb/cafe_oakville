@@ -45,6 +45,11 @@
 	src:									font-url('Arvo/Arvo-Regular.ttf');
 }
 
+@font-face {
+	font-family:					proxima-nova;
+	src:									font-url('ProximaNova-Reg.ttf');
+}
+
 /* mixins, variables, etc. */
 
 @mixin box_sizing {
@@ -247,7 +252,7 @@ header#top h1 {
 	margin:								0px 50px;
 	p, ul {
 		font-size:					125%;
-		font-family:				sanchez-regular;
+		font-family:				proxima-nova;
 	}
 	ul {
 		margin-left: 10px;
@@ -430,8 +435,8 @@ header#top h1 {
 			border-radius:		10px;
 
 			p {
-				font-family:			enriqueta;
-				font-size: 				110%;
+				font-family:			proxima-nova;
+				font-size: 				120%;
 			}
 		}
 	}
