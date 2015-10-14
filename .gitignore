@@ -17,3 +17,6 @@
 
 # Ignore rbenv .ruby-version
 /.ruby-version
+
+# Ignore vim .un~ files
+/*.un~
